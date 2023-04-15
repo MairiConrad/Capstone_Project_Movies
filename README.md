@@ -4,7 +4,7 @@
 
 _**EDA in Jupyter**_: 
 
-In the following notebook you can see that I began with files in TSV from the [IMDB dataset](https://www.imdb.com/interfaces/) and converted them to CSVs in a file for each of the notebooks. The notebooks are available in the files above. During that process I used a separate notebook titled EDA2 and did some initial removing of columns that were not needed for the transition to SSMS in order to save on memory space. I also used a Notebook titled EDA to look at initial specifics of files and to get an idea of what the files looked like. I decided to only analyze feature films and therefore specified that the title_basics CSV only have the 'movie' titleType. This narrowed the dataset down to 640834
+In the above JUPYTER notebooks you can see that I began with files in TSV from the [IMDB dataset](https://www.imdb.com/interfaces/) and converted them to CSVs in a file for each of the notebooks. During that process I used a separate notebook titled EDA2 and did some initial removing of columns that were not needed for the transition to SSMS in order to save on memory space. I also used a Notebook titled EDA to look at initial specifics of files and to get an idea of what the files looked like. I decided to only analyze feature films and therefore specified that the title_basics CSV only have the 'movie' titleType. This narrowed the dataset down to 640834
 
 ![JupyterNotebookPhoto](MoviesOnlyPandas.PNG).
 
