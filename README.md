@@ -32,7 +32,7 @@ _**Next Steps**_:
 3. Once I have the fact table ready to go, I have a template for PowerBI ready for the star schema. I have already planned out my presentation of the information within PowerBI.
 4. I am hoping to have my star schema ready by tomorrow afternoon and to be working on the visualizations.
 
-#First Draft Info
+# First Draft Info
 ### **1. Introduction**
 This project will outline the aspects of film that influence whether or not my grandmother will purchase a physical copy of a movie. I will do this by taking a dataset of IMDB's movie database, which is updated quarterly, and comparing it to the physical copies of movies in my grandmother's basement.
 
