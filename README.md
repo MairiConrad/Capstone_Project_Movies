@@ -4,7 +4,7 @@
 
 _**EDA in Jupyter**_: 
 
-In the following notebook you can see that I began with files in TSV from the [IMDB dataset](https://www.imdb.com/interfaces/) and converted them to CSVs in a file for each of the notebooks. **LinktoNotebook** During that process I used a separate notebook titled EDA2 and did some initial removing of columns that were not needed for the transition to SSMS in order to save on memory space. I also used a Notebook titled EDA to look at initial specifics of files and to get an idea of what the files looked like. I decided to only analyze feature films and therefore specified that the title_basics CSV only have the 'movie' titleType. This narrowed the dataset down to 640834
+In the following notebook you can see that I began with files in TSV from the [IMDB dataset](https://www.imdb.com/interfaces/) and converted them to CSVs in a file for each of the notebooks. The notebooks are available in the files above. During that process I used a separate notebook titled EDA2 and did some initial removing of columns that were not needed for the transition to SSMS in order to save on memory space. I also used a Notebook titled EDA to look at initial specifics of files and to get an idea of what the files looked like. I decided to only analyze feature films and therefore specified that the title_basics CSV only have the 'movie' titleType. This narrowed the dataset down to 640834
 
 ![JupyterNotebookPhoto](MoviesOnlyPandas.PNG).
 
@@ -50,6 +50,9 @@ _**Next Steps**_:
 2. After this is complete, I plan to create the Fact Table. In the fact table I intend to include the movie ratings as a field of it's own because I don't feel it needs it's own dimension table. 
 3. Once I have the fact table ready to go, I have a template for PowerBI ready for the star schema. I have already planned out my presentation of the information within PowerBI.
 4. I am hoping to have my star schema ready by tomorrow afternoon and to be working on the visualizations.
+
+![PowerBI](PowerBITemplateExample.PNG)
+
 
 # First Draft Info
 ### **1. Introduction**
