@@ -4,18 +4,34 @@
 
 _**EDA in Jupyter**_: 
 
-In the following notebook you can see that I began with files in TSV from the [IMDB dataset](https://www.imdb.com/interfaces/) and converted them to CSVs in a file for each of the notebooks. **LinktoNotebook** During that process I used a separate notebook titled EDA2 and did some initial removing of columns that were not needed for the transition to SSMS in order to save on memory space. I also used a Notebook titled EDA to look at initial specifics of files and to get an idea of what the files looked like. I decided to only analyze feature films and therefore specified that the title_basics CSV only have the 'movie' titleType. This narrowed the dataset down to 640834 ![JupyterNotebookPhoto](MoviesOnlyPandas.PNG).
+In the following notebook you can see that I began with files in TSV from the [IMDB dataset](https://www.imdb.com/interfaces/) and converted them to CSVs in a file for each of the notebooks. **LinktoNotebook** During that process I used a separate notebook titled EDA2 and did some initial removing of columns that were not needed for the transition to SSMS in order to save on memory space. I also used a Notebook titled EDA to look at initial specifics of files and to get an idea of what the files looked like. I decided to only analyze feature films and therefore specified that the title_basics CSV only have the 'movie' titleType. This narrowed the dataset down to 640834
+
+![JupyterNotebookPhoto](MoviesOnlyPandas.PNG).
 
 Once I had figured out what columns would be needed and had removed the ones I wouldn't need, I created the final CSVs that were ready to be imported to SSMS.
 
 _**SSMS Stage**_: 
 
 ![CSVImport](initalCSVimport.PNG)
-Once the CSVs were imported to the database, I used the created tables to look at the data and figure out what I would need for analysis. I began to explore the data and created a table to use when recording the movies my grandmother owns. Once I started exploring the data more, I realized that I excluded too many datapoints from my new table.![WrongTable](IncorrectTable.PNG) I hadn't realized my grandmother had movies that were released prior to 1925.Therefore, I made a copy of the CSV I created from Jupyter and named it. 
+
+Once the CSVs were imported to the database, I used the created tables to look at the data and figure out what I would need for analysis. I began to explore the data and created a table to use when recording the movies my grandmother owns. Once I started exploring the data more, I realized that I excluded too many datapoints from my new table.
+
+![WrongTable](IncorrectTable.PNG) 
+
+I hadn't realized my grandmother had movies that were released prior to 1925.Therefore, I made a copy of the CSV I created from Jupyter and named it. 
 
 The next step was the longest part of the process thus far. I had to go through my grandmother's movies individually to figure out what movie they were in the database. At the point I had to enter the data, I didn't have a star schema prepared yet but I found a way around this so I could create the dataset I was looking for.
 
-I began by searching for the movie in the CSV ![CSV](CSVMovieExample.PNG). And if the movie wasn't identifiable as the movie in the search by either the title or the year, I would use the tconst column value to check in the larger database and find the film by actor and/or director ![SMSsearch](SSMSsearch.PNG). If I still couldn't find the movie, I would check in the even larger file within Notepad++ to see if the movie was a made-for-TV movie or a TV show. If it was any form of media besides a feature film, I excluded it from the database. To indicate that a movie was in the collection, I placed a 1 in the column GMovies.
+I began by searching for the movie in the CSV 
+
+![CSV](CSVMovieExample.PNG). 
+
+And if the movie wasn't identifiable as the movie in the search by either the title or the year, I would use the tconst column value to check in the larger database and find the film by actor and/or director 
+
+![SMSsearch](SSMSsearch.PNG).
+
+If I still couldn't find the movie, I would check in the even larger file within Notepad++ to see if the movie was a made-for-TV movie or a TV show. If it was any form of media besides a feature film, I excluded it from the database. To indicate that a movie was in the collection, I placed a 1 in the column GMovies.
+
 
 _**Creation of Dimensions within SSIS**_:
 
@@ -26,6 +42,7 @@ I created the SQL code for the following dimensions:
 - Names: This table has all 12 million plus names that were available in the original dataset as I didn't want to accidentally exclude a name that might be connected to a movie in the Movie table. I decided to keep the table as it was when I first imported it to SSMS as all the columns were relevant to the dimension.
 
 I have also been setting up a project within SSIS so that my method of creating the star schema is repeatable and I can organize my progress as I go.
+
 ![SSIS](SSISdimensionWork.PNG)
 
 _**Next Steps**_:
