@@ -17,13 +17,15 @@ I wanted to add some notes of things I found difficult and overcame along the wa
 
 ![AcademyAwardsCode](./Pictures/AcademyAwardsCode.PNG) 
 
-Another difficulty I had was that my name dimension ended up being about 12 million rows when I had at first wanted to keep the whole original dataset. I had actually already finished the star schema at that point and importing it to PowerBI and while it was tempting to not fix this, I knew it would be better for the report to run on less rows. I narrowed the scope of the dimensions to only the crew featured in my grandmother's movies and narrowed it down to 3430  rows instead. This number was a lot more manageable and made the report run a lot smoother. I was really happy about this change.
+- Another difficulty I had was that my name dimension ended up being about 12 million rows when I had at first wanted to keep the whole original dataset. I had actually already finished the star schema at that point and importing it to PowerBI and while it was tempting to not fix this, I knew it would be better for the report to run on less rows. I narrowed the scope of the dimensions to only the crew featured in my grandmother's movies and narrowed it down to 3430  rows instead. This number was a lot more manageable and made the report run a lot smoother. I was really happy about this change.
 
 ![NamesCode](./Pictures/NamesDimension.PNG) 
 
-I was especially happy with how the genre dimension worked out in the report. I was nervous that I was overthinking my decision to create a separate column for each genre as a binary but it made the creation of the treemap a lot easier to manage after separating the different genres beforehand.
+- I was especially happy with how the genre dimension worked out in the report. I was nervous that I was overthinking my decision to create a separate column for each genre as a binary but it made the creation of the treemap a lot easier to manage after separating the different genres beforehand.
 
 ![GenreCode](./Pictures/GenreDimension.PNG) 
+
+**In Summary**:
 
 I was surprised by some of the results of this report. I didn't expect the drama genre to be so prevalent throughout the report. I also expected there to be more academy award winners in her collection. I was not surprised by the actors that were in her top featured. She really loves action movies and most of the actors I saw on that list are her favourites. Overall, I'm really excited to show her the final product tomorrow and let her see her collection in a new way!
 
