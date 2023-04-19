@@ -1,5 +1,32 @@
 # **Why Does My Grandmother Buy Her Movies?** :movie_camera:
 
+# **Final Product of Project** :movie_camera:
+
+**I need to begin this update by saying that GitHub has a limit to the MBs I can upload for a video. I have uploaded my video of how my report works to Brightspace to avoid any other issues with uploading**
+
+After the last update to my Capstone project, I finished creating my dimensions for my database and completed the star schema. I ended up with 5 dimensions (AcademyAwards, category, Genres, Movie and Names) and 1 fact table. I made the finished product of dimensions and fact table through the use of SSIS. I created the primary keys for the dimensions as I created them within SSIS. I then created the fact table query, and inserted it into the SSIS project. Then I created the foreign keys within SSIS connected to the dimensions.
+
+![CodeforCreatingTables](./Pictures/CodeforSSISexample.PNG)
+
+![SSISLayout](./Pictures/finalSSIS.PNG)
+
+I wanted to add some notes of things I found difficult and overcame along the way:
+- I noticed when I was creating my Academy Awards dimension that the Academy Awards were being associated to multiple movies in the dataset due to some movies having the exact same name. I avoided this by joining on both the name of the film and the year of the movie.
+
+![AcademyAwardsCSV](./Pictures/academyawardscsv.PNG)
+
+![AcademyAwardsCode](./Pictures/AcademyAwardsCode.PNG) 
+
+Another difficulty I had was that my name dimension ended up being about 12 million rows when I had at first wanted to keep the whole original dataset. I had actually already finished the star schema at that point and importing it to PowerBI and while it was tempting to not fix this, I knew it would be better for the report to run on less rows. I narrowed the scope of the dimensions to only the crew featured in my grandmother's movies and narrowed it down to 3430  rows instead. This number was a lot more manageable and made the report run a lot smoother. I was really happy about this change.
+
+![NamesCode](./Pictures/NamesDimension.PNG) 
+
+I was especially happy with how the genre dimension worked out in the report. I was nervous that I was overthinking my decision to create a separate column for each genre as a binary but it made the creation of the treemap a lot easier to manage after separating the different genres beforehand.
+
+![GenreCode](./Pictures/GenreDimension.PNG) 
+
+I was surprised by some of the results of this report. I didn't expect the drama genre to be so prevalent throughout the report. I also expected there to be more academy award winners in her collection. I was not surprised by the actors that were in her top featured. She really loves action movies and most of the actors I saw on that list are her favourites. Overall, I'm really excited to show her the final product tomorrow and let her see her collection in a new way!
+
 # **Updated Status of Project** :movie_camera:
 
 _**EDA in Jupyter**_: 
